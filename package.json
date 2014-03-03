@@ -1,26 +1,21 @@
 {
-  "name": "RuAngular",
+  "name": "GomelAgroParts",
   "version": "0.0.1",
-  "description": "MEAN blog",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/n8m/mean-blog.git"
+    "url": "https://github.com/n8m/gomelagroparts.git"
   },
   "author": "n8m",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/n8m/mean-blog/issues"
+    "url": "https://github.com/n8m/gomelagroparts/issues"
   },
   "dependencies": {
-    "mongoose-text-search": "0.0.2",
-    "mongoose": "~3.8.7",
     "express": "~3.4.8",
     "node-static": "~0.7.3",
-    "passport-local": "~0.1.6",
-    "passport-http": "~0.2.2"
   }
 }
