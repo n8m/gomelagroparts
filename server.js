@@ -20,9 +20,9 @@ app.post('/mail', function(request, response){
 
 	// setup e-mail data with unicode symbols
 	var mailOptions = {
-	    from: "Fred Foo ✔ <foo@blurdybloop.com>", // sender address
+	    from: "blackvilt@gmail.com", // sender address
 	    to: "blackvilt@gmail.com", // list of receivers
-	    subject: "Письмо с сайт", // Subject line
+	    subject: "Письмо с сайта", // Subject line
 	    text: request.body.name + '\n' + request.body.mail + '\n' + request.body.msg, // plaintext body
 	    html: "<b>Hello world ✔</b>" // html body
 	}
@@ -36,7 +36,7 @@ app.post('/mail', function(request, response){
 	    }
 
 	    // if you don't want to use this transport object anymore, uncomment following line
-	    //smtpTransport.close(); // shut down the connection pool, no more messages
+	    smtpTransport.close(); // shut down the connection pool, no more messages
 	});
 
 });
