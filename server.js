@@ -16,7 +16,7 @@ app.post('/mail', function(request, response){
 	  to: 'blackvilt@gmail.com',
 	  from: 'app22711431@heroku.com',
 	  subject: 'Письмо с сайта',
-	  text: 'Автор: ' request.body.name + '\n' + 'E-mail: ' + request.body.mail + '\n' + 'Сообщение: ' + request.body.msg 
+	  text: 'Автор: ' + request.body.name + '\n' + 'E-mail: ' + request.body.mail + '\n' + 'Сообщение: ' + request.body.msg 
 	}, function(err, json) {
 	if (err) { return console.error(err); }
 	  response.send(json);
