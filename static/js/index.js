@@ -15,8 +15,7 @@ $(function() {
     var dataString = $(".form").serialize();
     $.post('/mail',dataString,function(){
     	alert('Сообщение отправлено');
-		$('.form').find('input').val('');
-		$('.form').find('textarea').val('Ваше сообщение');
+		$('.form-input').val('');
 	});
 
   });
