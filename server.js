@@ -9,7 +9,8 @@ app.use(express.favicon()); // отдаем стандартную фавико�
 
 app.post('/', function(request, response){
 
-    console.log(request.body);
+	response.send(request.body);
+    // console.log();
     // console.log(request.body.user.email);
 
 });
