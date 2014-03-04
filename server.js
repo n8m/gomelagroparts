@@ -5,11 +5,11 @@ var nodemailer = require("nodemailer");
 var app = express();
 app.use(express.static(path.join(__dirname, "static"))); // запуск статического файлового сервера, который смотрит на папку public/ (в нашем случае отдает index.html)
 app.use(express.favicon()); // отдаем стандартную фавиконку, можем здесь же свою задать
-
+app.use(express.urlencoded()); // to support URL-encoded bodies
 
 app.post('/mail', function(request, response){
 
-	response.send(request.body);
+	response.send(request.body.name);
     // console.log();
     // console.log(request.body.user.email);
 
