@@ -15,7 +15,8 @@ $(function() {
     var dataString = $(".form").serialize();
     $.post('/mail',dataString,function(){
     	alert('Сообщение отправлено');
-    	// $('.form_submit').attr("disabled", true);
+		$('.form').find('input').val('');
+		$('.form').find('textarea').val('Ваше сообщение');
 	});
 
   });
