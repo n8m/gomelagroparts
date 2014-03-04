@@ -8,7 +8,7 @@ var sendgrid  = require('sendgrid')(
 var app = express();
 app.use(express.static(path.join(__dirname, "static"))); // запуск статического файлового сервера, который смотрит на папку public/ (в нашем случае отдает index.html)
 app.use(express.favicon()); // отдаем стандартную фавиконку, можем здесь же свою задать
-app.use(express.json());       // to support JSON-encoded bodies
+app.use(express.urlencoded()); // to support URL-encoded bodies
 
 app.post('/mail', function(request, response){
 
@@ -23,7 +23,6 @@ app.post('/mail', function(request, response){
 	});
 
 });
-
 
 app.listen(process.env.PORT || 1337, function () {
     console.log('Express server listening on port' + process.env.PORT);
