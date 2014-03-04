@@ -16,10 +16,8 @@ app.post('/', function(request, response){
 });
 
 
-
-
 app.listen(process.env.PORT || 1337, function () {
-    console.log('Express server listening on port 1337');
+    console.log('Express server listening on port' + process.env.PORT);
 });
 
 
