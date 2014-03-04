@@ -9,13 +9,13 @@ slide();
 
 
 $(function() {  
-  $(".form_submit").click(function() {  
+  $(".form-submit").click(function() {  
 
   	event.preventDefault();
     var dataString = $(".form").serialize();
-    $.get('send.php',dataString,function(){
+    $.post('/mail',dataString,function(){
     	alert('Сообщение отправлено');
-    	$('.form_submit').attr("disabled", true);
+    	// $('.form_submit').attr("disabled", true);
 	});
 
   });
