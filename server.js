@@ -19,7 +19,7 @@ app.post('/mail', function(request, response){
 	  text: request.body.name + '\n' + request.body.mail + '\n' + request.body.msg 
 	}, function(err, json) {
 	if (err) { return console.error(err); }
-	  console.log(json);
+	  response.send(json);
 	});
 
 });
