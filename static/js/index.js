@@ -29,28 +29,6 @@ $(document).ready(function(){
 
 
 
-    $(".form_name").click(function () {
-        $(this).select();
-    }).mouseup(function(e){
-        e.preventDefault();
-    });
-
-    $(".form_mail").focus(function () {
-        $(this).select();
-    }).mouseup(function(e){
-        e.preventDefault();
-    });
-
-    $(".form_msg").focus(function () {
-        $(this).select();
-    }).mouseup(function(e){
-        e.preventDefault();
-    });
-
-
-
-
-
 	$(document).scroll(function(){
 
 		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -69,14 +47,6 @@ $(document).ready(function(){
 
 
 	})
-
-
-
-
-
-
-
-
 
 	$(".logo_text").click(function() {
     	 $('html, body').animate({

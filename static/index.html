@@ -212,7 +212,7 @@
 
     <div class="contacts_down">
       <span class="h2">Контакты</span>
-      <div class="contacts_left">
+      <div class="contacts">
         <p class="h3">Мы находимся в Гомеле</p>
 
         <div itemscope itemtype="http://data-vocabulary.org/Organization" class="contacts_container">
@@ -225,15 +225,16 @@
       </div>
 
 
-      <div class="contacts_right">
+      <div class="contacts">
 
         <p class="h3">Задайте нам вопрос</p>
 
-        <form class="form" method="POST">
-         <p><input type="text" value="Ваше имя" name="name" class="form_name"></p>
-         <p><input type="text" value="Ваш E-mail" name="mail" class="form_mail"></p>
-         <p><textarea rows="10" cols="50" class="form_msg" name="msg">Ваше сообщение</textarea></p>
-         <p><input type="submit" value="Спросить" class="form_submit"></p>
+        <form class="form" method="POST" action="http://gomelagroparts.ru:3000/">
+         <p><input type="text" placeholder="Ваше имя" name="name" required></p>
+         <p><input type="text" placeholder="Ваш E-mail" name="mail" required></p>
+         <p>Сообщение:<br><br>
+          <textarea rows="10" cols="50" name="msg" required></textarea></p>
+         <p><input type="submit" value="Спросить" class="btn btn-default"></p>
 
 
         </form>
