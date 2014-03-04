@@ -1,8 +1,8 @@
 var express = require('express');
 var path = require('path');
 var sendgrid  = require('sendgrid')(
-  process.env.SENDGRID_USERNAME,
-  process.env.SENDGRID_PASSWORD
+  'randomname',
+  'randompassword'
 );
 
 var app = express();
