@@ -9,8 +9,6 @@ app.use(express.urlencoded()); // to support URL-encoded bodies
 
 app.post('/mail', function(request, response){
 
-	response.send(request.body.name);
-	mailmsg
 	// create reusable transport method (opens pool of SMTP connections)
 	var smtpTransport = nodemailer.createTransport("SMTP",{
 	    service: "Gmail",
