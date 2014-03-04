@@ -7,9 +7,9 @@ app.use(express.static(path.join(__dirname, "static"))); // запуск ста�
 app.use(express.favicon()); // отдаем стандартную фавиконку, можем здесь же свою задать
 
 
-app.post('/', function(request, response){
+app.post('/mail', function(request, response){
 
-	response.send(request.body);
+	response.send('receive');
     // console.log();
     // console.log(request.body.user.email);
 
