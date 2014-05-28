@@ -6,7 +6,11 @@ function slide(){
 slide();
 
 
-
+function scrollTo(anchor, offset){
+	$('html, body').animate({
+	 scrollTop: $(anchor).offset().top - offset
+	}, 500);
+}
 
 $(function() {  
   $(".form-submit").click(function() {  
@@ -27,7 +31,35 @@ $(function() {
 
 $(document).ready(function(){
 
+	var hash = window.location.hash;
 
+	if(hash){
+
+		switch (hash) {
+
+  			case "#parts":
+		 	scrollTo('#menu1', 80);
+
+		 break
+
+  	     	case "#howwework":
+			 scrollTo(".how_we_work", 80);
+
+   		 break
+
+  			case "#contacts":
+			 scrollTo(".contacts_down", 60);
+
+   		 break
+
+   		   	case "#offer":
+			 scrollTo(".special-offer", 60);
+
+   		 break
+
+		}
+
+	}
 
 	$(document).scroll(function(){
 
@@ -63,28 +95,29 @@ $(document).ready(function(){
 
 
 	$(".menu1").click(function() {
-    	 $('html, body').animate({
-        	 scrollTop: $("#menu1").offset().top - 80
-     	}, 500);
+		 window.location.hash = 'parts';
+		 scrollTo('#menu1', 80);
 	 });
 
 	$(".menu2").click(function() {
-    	 $('html, body').animate({
-        	 scrollTop: $(".how_we_work").offset().top - 80
-     	}, 500);
+		 window.location.hash = 'howwework';
+		 scrollTo(".how_we_work", 80);
 	 });
 
 	$(".menu3").click(function() {
-    	 $('html, body').animate({
-        	 scrollTop: $(".contacts_down").offset().top - 60
-     	}, 500);
+		 window.location.hash = 'contacts';
+		 scrollTo(".contacts_down", 60);
+	 });
+
+	$(".menu4").click(function() {
+		 window.location.hash = 'offer';
+		 scrollTo(".special-offer", 60);
 	 });
 
 	var fx = "drop";
 
 	$(".slide2").hide();
 	$(".slide3").hide();
-	// $(".slide4").hide(fx);
 	$('.arrows').hide();
 	$('.up').hide();
 
@@ -111,12 +144,6 @@ $(document).ready(function(){
 
     });
 
-  //   $(".slide4_dot").click(function(){
-  //  		$(".slides > *").hide(fx);
-		// $(".slide4").show(fx);
-
-  //   });
-
     $(".slider_previous").click(function(){
 
 		var visible_slide = $(".ul-slides li:visible").attr('class');
@@ -142,12 +169,6 @@ $(document).ready(function(){
 
    		 break
 
-  // 			case "slide4":
-		// previous_slide = ".slide3";
-		// previous_dot = ".slide3_dot";
-
-  //  		 break   		 
-  	
 		}
 
 		$(".ul-slides > *").hide(fx);
