@@ -762,7 +762,17 @@ input:focus, textarea:focus {
 
 }
 
+.list{
+	list-style: none;
+	width: 500px;
+	margin: 30px auto;
+}
 
+.list li{
+	padding: 10px;
+	text-align: justify;
+	border: 1px solid grey;
+}
 
 
 
